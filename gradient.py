@@ -24,7 +24,7 @@ weights = np.array([0.5, -0.5, 0.3, 0.1])
 ###       fewer variable names than in the above sample code
 
 # Calculate the node's linear combination of inputs and weights
-h =  x[0]*weights[0] + x[1]*weights[1] + x[2]*weights[2] + x[3]*weights[3]
+h =  np.dot(x,weights)
 
 # Calculate output of neural network
 nn_output = sigmoid(h)
@@ -36,10 +36,7 @@ error = y - nn_output
 error_term = error * sigmoid_prime(h)
 
 # Calculate change in weights
-del_w = [ learnrate * error_term * x[0],
-          learnrate * error_term * x[1],
-          learnrate * error_term * x[2],
-          learnrate * error_term * x[3]]
+del_w = learnrate * error_term * x
 
 print('Neural Network output:')
 print(nn_output)
