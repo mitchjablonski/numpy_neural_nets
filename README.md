@@ -1,2 +1,2 @@
 
-Basic Neural Networks in pytorch for the Udacity Deep Learning Course
+Basic Neural Networks in numpy for the Udacity Deep Learning Course
